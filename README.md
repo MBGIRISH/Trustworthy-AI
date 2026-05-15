@@ -1,4 +1,4 @@
-# VERITAS - Agentic AI Oversight System
+# TRUSTWORTHY AI- Agentic AI Oversight System
 
 **Verified · Explainable · Reliable · Intelligent · Technical · AI · System**
 
