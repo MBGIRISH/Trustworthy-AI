@@ -1,4 +1,4 @@
-// Core data models for VERITAS verification system
+// Core data models for Trustworthy AI verification system
 
 export interface ClaimUnit {
   claimId: string;

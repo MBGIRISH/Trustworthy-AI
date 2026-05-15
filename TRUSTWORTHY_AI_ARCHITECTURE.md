@@ -1,11 +1,11 @@
-# VERITAS - Full-Stack Architecture
+# Trustworthy AI - Full-Stack Architecture
 
 A production-grade **Multi-Agent Technical Verification System** built with Next.js, React, and real LLM APIs (Groq).
 
 ## System Architecture
 
 ```
-VERITAS/
+trustworthy-ai/
 ├── Frontend (React/Next.js)
 │   ├── QuerySubmissionView       # Premium home page with example queries
 │   ├── LiveDashboardView         # Real-time agent status monitoring
@@ -241,8 +241,8 @@ vercel deploy
 
 ### Docker (Optional)
 ```bash
-docker build -t veritas .
-docker run -p 3000:3000 -e GROQ_API_KEY=xxx veritas
+docker build -t trustworthy-ai .
+docker run -p 3000:3000 -e GROQ_API_KEY=xxx trustworthy-ai
 ```
 
 ## Performance Metrics

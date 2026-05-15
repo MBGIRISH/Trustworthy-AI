@@ -99,7 +99,7 @@ export async function analyzeCodeClaims(
           }
         }
       } catch (e) {
-        console.error('[VERITAS] Code execution error:', e);
+        console.error('[Trustworthy AI] Code execution error:', e);
       }
     }
 
@@ -119,7 +119,7 @@ export async function analyzeCodeClaims(
         });
       }
     } catch (e) {
-      console.error('[VERITAS] GitHub code search error:', e);
+      console.error('[Trustworthy AI] GitHub code search error:', e);
     }
   }
 
@@ -169,7 +169,7 @@ export async function analyzeCodeClaims(
       }
     }
   } catch (error) {
-    console.error('[VERITAS] Code analyzer Groq error:', error);
+    console.error('[Trustworthy AI] Code analyzer Groq error:', error);
     // Fallback if no issues from execution
     if (issues.length === 0) {
       for (const claim of codeClaims) {

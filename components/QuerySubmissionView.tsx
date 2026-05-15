@@ -134,7 +134,7 @@ export function QuerySubmissionView({
                 </div>
                 <div className="flex-1 text-center flex items-center justify-center gap-2">
                   <Terminal size={14} className="text-gray-500" />
-                  <span className="text-xs font-mono text-gray-500">veritas_terminal_v9.sh</span>
+                  <span className="text-xs font-mono text-gray-500">trustworthy_ai_terminal_v9.sh</span>
                 </div>
               </div>
 

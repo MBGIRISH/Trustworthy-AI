@@ -70,7 +70,7 @@ export const mcpFetch = {
       const response = await fetch(url, {
         signal: controller.signal,
         headers: {
-          'User-Agent': 'VERITAS-Agent/1.0 (Technical Verification System)',
+          'User-Agent': 'TrustworthyAI-Agent/1.0 (Technical Verification System)',
         },
       });
 
@@ -261,7 +261,7 @@ export const mcpFilesystem = {
     feedLogs: unknown[];
   }): string {
     return JSON.stringify({
-      reportType: 'VERITAS Verification Audit Report',
+      reportType: 'Trustworthy AI Verification Audit Report',
       generatedAt: new Date().toISOString(),
       version: '1.0.0',
       ...jobData,

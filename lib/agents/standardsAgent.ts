@@ -247,7 +247,7 @@ Return JSON: { "results": [{ "citation": "...", "valid": true|false, "fullName":
         }
       }
     } catch (error) {
-      console.error('[VERITAS] Standards agent Groq error:', error);
+      console.error('[Trustworthy AI] Standards agent Groq error:', error);
       correctiveHints.push('Some standards could not be verified via AI — manual review recommended');
     }
   }

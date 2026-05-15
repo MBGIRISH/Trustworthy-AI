@@ -1,7 +1,7 @@
-# VERITAS - Hackathon Submission Verification Checklist
+# Trustworthy AI - Hackathon Submission Verification Checklist
 
 ## Document Reference
-This implementation is built against: **International Hackathon Submission · Agentic AI Systems - VERITAS Specification**
+This implementation is built against: **International Hackathon Submission · Agentic AI Systems - Trustworthy AI Specification**
 
 ---
 
@@ -429,7 +429,7 @@ All 7 domains with full weight matrices:
 - All documentation complete
 - Ready to run: `pnpm install && pnpm dev`
 
-**VERITAS is ready for the International Hackathon - Agentic AI Systems submission.**
+**Trustworthy AI is ready for the International Hackathon - Agentic AI Systems submission.**
 
 ---
 

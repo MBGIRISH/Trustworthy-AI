@@ -72,7 +72,7 @@ export async function validateMathClaims(
           });
         }
       } catch (e) {
-        console.error('[VERITAS] Wolfram Alpha error:', e);
+        console.error('[Trustworthy AI] Wolfram Alpha error:', e);
       }
     }
   }
@@ -128,7 +128,7 @@ export async function validateMathClaims(
       }
     }
   } catch (error) {
-    console.error('[VERITAS] Math validator Groq error:', error);
+    console.error('[Trustworthy AI] Math validator Groq error:', error);
     // Fallback: mark as unverified rather than crashing
     if (issues.length === 0) {
       for (const claim of mathClaims) {

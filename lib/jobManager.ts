@@ -7,7 +7,7 @@ import * as path from 'path';
 // Turbopack runs each API route in a SEPARATE worker process,
 // so in-memory Maps, globalThis, and even `process` DO NOT share state.
 // The only solution: filesystem.
-const STORE_DIR = path.join(process.cwd(), '.veritas-store');
+const STORE_DIR = path.join(process.cwd(), '.trustworthy-ai-store');
 const JOBS_DIR = path.join(STORE_DIR, 'jobs');
 const LOGS_DIR = path.join(STORE_DIR, 'logs');
 
@@ -54,7 +54,7 @@ export class JobManager {
 
     writeJSON(path.join(JOBS_DIR, `${jobId}.json`), job);
     writeJSON(path.join(LOGS_DIR, `${jobId}.json`), []);
-    console.log(`[VERITAS] Job ${jobId} CREATED`);
+    console.log(`[Trustworthy AI] Job ${jobId} CREATED`);
     return job;
   }
 

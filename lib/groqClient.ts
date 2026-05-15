@@ -75,7 +75,7 @@ export async function callGroqAPI(
         // Log token usage for monitoring
         const usage = chatCompletion.usage;
         if (usage) {
-          console.log(`[VERITAS] Groq ${model}: ${usage.prompt_tokens}→${usage.completion_tokens} tokens`);
+          console.log(`[Trustworthy AI] Groq ${model}: ${usage.prompt_tokens}→${usage.completion_tokens} tokens`);
         }
 
         return content;
@@ -85,33 +85,33 @@ export async function callGroqAPI(
         // Rate limit — backoff and retry same model
         if (error?.status === 429) {
           const delay = backoffDelay(attempt);
-          console.warn(`[VERITAS] Groq rate limit on ${model}, backoff ${delay}ms (attempt ${attempt + 1}/3)`);
+          console.warn(`[Trustworthy AI] Groq rate limit on ${model}, backoff ${delay}ms (attempt ${attempt + 1}/3)`);
           await new Promise((r) => setTimeout(r, delay));
           continue;
         }
 
         // Model not found or other 4xx — try next model
         if (error?.status === 404 || error?.status === 400) {
-          console.warn(`[VERITAS] Model ${model} unavailable, trying next fallback...`);
+          console.warn(`[Trustworthy AI] Model ${model} unavailable, trying next fallback...`);
           break;
         }
 
         // Server error — retry with backoff
         if (error?.status >= 500) {
           const delay = backoffDelay(attempt);
-          console.warn(`[VERITAS] Groq server error on ${model}, retry in ${delay}ms`);
+          console.warn(`[Trustworthy AI] Groq server error on ${model}, retry in ${delay}ms`);
           await new Promise((r) => setTimeout(r, delay));
           continue;
         }
 
         // Unknown error — try next model
-        console.error(`[VERITAS] Groq ${model} error:`, error?.message || error);
+        console.error(`[Trustworthy AI] Groq ${model} error:`, error?.message || error);
         break;
       }
     }
   }
 
-  console.error('[VERITAS] All Groq models exhausted. Last error:', lastError?.message || lastError);
+  console.error('[Trustworthy AI] All Groq models exhausted. Last error:', lastError?.message || lastError);
   throw lastError || new Error('All Groq models failed');
 }
 
@@ -128,14 +128,14 @@ export async function parseJSONFromGroq(
   const jsonStr = jsonBlockMatch ? jsonBlockMatch[1].trim() : rawJsonMatch ? rawJsonMatch[0] : null;
 
   if (!jsonStr) {
-    console.error('[VERITAS] Could not extract JSON from Groq response:', response.slice(0, 300));
+    console.error('[Trustworthy AI] Could not extract JSON from Groq response:', response.slice(0, 300));
     throw new Error('Could not parse JSON from Groq response');
   }
 
   try {
     return JSON.parse(jsonStr);
   } catch (parseError) {
-    console.error('[VERITAS] JSON parse error:', parseError, 'Raw:', jsonStr.slice(0, 300));
+    console.error('[Trustworthy AI] JSON parse error:', parseError, 'Raw:', jsonStr.slice(0, 300));
     throw new Error('Invalid JSON in Groq response');
   }
 }

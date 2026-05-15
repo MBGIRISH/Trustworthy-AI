@@ -69,7 +69,7 @@ export async function performReasoning(
         }
       }
     } catch (e) {
-      console.error('[VERITAS] Semantic similarity error:', e);
+      console.error('[Trustworthy AI] Semantic similarity error:', e);
     }
   }
 
@@ -128,7 +128,7 @@ export async function performReasoning(
       }
     }
   } catch (error) {
-    console.error('[VERITAS] Reasoning agent Groq error:', error);
+    console.error('[Trustworthy AI] Reasoning agent Groq error:', error);
     // Fallback: basic heuristic checks
     for (let i = 0; i < claims.length; i++) {
       for (let j = i + 1; j < claims.length; j++) {

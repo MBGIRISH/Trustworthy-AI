@@ -54,7 +54,7 @@ export async function verifyFactualClaims(
           continue;
         }
       } catch (err) {
-        console.error('[VERITAS] you.com adapter error:', err);
+        console.error('[Trustworthy AI] you.com adapter error:', err);
       }
     }
 
@@ -86,7 +86,7 @@ export async function verifyFactualClaims(
           if (verified) continue;
         }
       } catch (err) {
-        console.error('[VERITAS] Serper search error:', err);
+        console.error('[Trustworthy AI] Serper search error:', err);
       }
     }
 
@@ -135,7 +135,7 @@ export async function verifyFactualClaims(
           continue;
         }
       } catch (err) {
-        console.error('[VERITAS] Scholar search error:', err);
+        console.error('[Trustworthy AI] Scholar search error:', err);
       }
     }
 
@@ -174,7 +174,7 @@ export async function verifyFactualClaims(
           }
         }
       } catch (err) {
-        console.error('[VERITAS] StackOverflow search error:', err);
+        console.error('[Trustworthy AI] StackOverflow search error:', err);
       }
     }
 

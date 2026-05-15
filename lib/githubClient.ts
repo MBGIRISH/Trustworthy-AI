@@ -17,7 +17,7 @@ function getHeaders(): Record<string, string> {
   const token = process.env.GITHUB_TOKEN;
   const headers: Record<string, string> = {
     Accept: 'application/vnd.github.v3+json',
-    'User-Agent': 'VERITAS-Agent/2.0',
+    'User-Agent': 'TrustworthyAI-Agent/2.0',
   };
   if (token) {
     headers['Authorization'] = `Bearer ${token}`;

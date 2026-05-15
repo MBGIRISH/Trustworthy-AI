@@ -1,8 +1,8 @@
-# TRUSTWORTHY AI- Agentic AI Oversight System
+# Trustworthy AI - Agentic AI Oversight System
 
 **Verified · Explainable · Reliable · Intelligent · Technical · AI · System**
 
-A production-grade multi-agent framework for hallucination detection and autonomous verification of AI-generated technical outputs. VERITAS uses 9 specialized agents, real MCP servers, domain-weighted scoring, and automatic self-correction to ensure technical accuracy before delivery.
+A production-grade multi-agent framework for hallucination detection and autonomous verification of AI-generated technical outputs. Trustworthy AI uses 9 specialized agents, real MCP servers, domain-weighted scoring, and automatic self-correction to ensure technical accuracy before delivery.
 
 ## Features
 
@@ -57,7 +57,7 @@ INPUT LAYER                  AGENT LAYER                      OUTPUT LAYER
 ## Project Structure
 
 ```
-veritas/
+trustworthy-ai/
 ├── app/                          # Next.js 16 frontend + API
 │   ├── api/
 │   │   ├── verify/route.ts       # POST /api/verify - submit query
@@ -114,7 +114,7 @@ veritas/
 
 ```bash
 git clone <repo>
-cd veritas
+cd trustworthy-ai
 pnpm install
 ```
 
@@ -331,7 +331,7 @@ Edit `lib/domainWeights.json` to adjust agent importance per industry:
 ### Console Logs
 ```bash
 # Watch live logs
-tail -f /tmp/veritas.log
+tail -f /tmp/trustworthy-ai.log
 ```
 
 ### Job Status
@@ -374,4 +374,4 @@ Built for the International Hackathon · Agentic AI Systems Track
 
 ---
 
-**VERITAS** — Where AI verification is never left to chance.
+**Trustworthy AI** — Where AI verification is never left to chance.

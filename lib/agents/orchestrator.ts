@@ -125,7 +125,7 @@ export async function runVerificationPipeline(job: VerificationJob) {
       if (result.status === 'fulfilled') {
         return result.value;
       } else {
-        console.error(`[VERITAS] ${agentName} failed:`, result.reason);
+        console.error(`[Trustworthy AI] ${agentName} failed:`, result.reason);
         emitLog(job.jobId, agentName.toUpperCase(), `Agent error: ${result.reason?.message || 'Unknown error'}`, 'error');
         return createAgentVerdict({
           agentId,
@@ -256,7 +256,7 @@ export async function runVerificationPipeline(job: VerificationJob) {
     );
 
   } catch (error) {
-    console.error('[VERITAS] Pipeline error:', error);
+    console.error('[Trustworthy AI] Pipeline error:', error);
     JobManager.updateJob(job.jobId, { status: 'failed' });
     emitLog(job.jobId, 'ORCHESTRATOR',
       `Pipeline failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
